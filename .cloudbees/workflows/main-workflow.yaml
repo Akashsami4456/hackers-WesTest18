@@ -13,15 +13,15 @@ permissions:
 jobs:
   test:
     steps:
-      - name: Run Jenkins Job
-        kind: test
-        uses: cloudbees-io/jenkins-run-job@v2
-        continue-on-error: true
-        with:
-          url: https://sda.preview.cb-demos.io/westest/
-          username: ${{ secrets.WES_JENKINS_USERNAME }}
-          token: ${{ secrets.WES_JENKINS_TOKEN }}
-          job-name: WesTestJob3
+      # - name: Run Jenkins Job
+      #   kind: test
+      #   uses: cloudbees-io/jenkins-run-job@v2
+      #   continue-on-error: true
+      #   with:
+      #     url: https://sda.preview.cb-demos.io/westest/
+      #     username: ${{ secrets.WES_JENKINS_USERNAME }}
+      #     token: ${{ secrets.WES_JENKINS_TOKEN }}
+      #     job-name: WesTestJob3
       - name: Run GHA Workflow
         kind: test
         uses: cloudbees-io/ghactions-run-workflow@v2
